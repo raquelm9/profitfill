@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### Profit Fill Challenge
 
-## Getting Started
+### Running the App
 
-First, run the development server:
+1. First install the dependencies `npm ci`
+2. Build it `npm run build`
+3. Run it `npm run start`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Libraries used
+
+- Next JS
+- Tailwind
+- Headless UI
+
+### Architecture
+
+The app relies on next js routing system. The backend routes are located under the `api` folder and the pages (front end routes) are `/` and `/jobs/<id>`. Next JS provides a flexible way of building fullstack applications enabling to share types between the front end and backed components as well as the flexibility for doing Client Side or Server Side Rendering along with a file based routing scheme.
+
+### Requirements
+
+# Take Home Assignment
+
+Here is the JSON data and the task is to build a backend with the endpoints mentioned below:
+
+### Sample JSON Data
+
+A JSON structure representing a simple job management dashboard:
+
+```json
+[
+  {
+    "id": 1,
+    "customerName": "John Doe",
+    "jobType": "Plumbing",
+    "status": "Scheduled",
+    "appointmentDate": "2024-06-15T09:00:00Z",
+    "technician": "Jane Smith"
+  },
+  {
+    "id": 2,
+    "customerName": "Alice Johnson",
+    "jobType": "Electrical",
+    "status": "Completed",
+    "appointmentDate": "2024-05-20T14:00:00Z",
+    "technician": "Bob Brown"
+  }
+]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend Task
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Objective**: Develop REST API endpoints to manage the job data.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### API Endpoints:
 
-## Learn More
+1. **GET /jobs** - Retrieves all jobs.
+2. **GET /jobs/:id** - Retrieves a specific job by ID.
+3. **POST /jobs** - Adds a new job record.
+4. **PUT /jobs/:id** - Updates an existing job record.
+5. **DELETE /jobs/:id** - Deletes a job record.
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend Task
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Objective**: Create a web application that interacts with the backend to display and manage the job data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Frontend Requirements:
 
-## Deploy on Vercel
+- **Job List View**: Display all services in a list or table format.
+- **Job Details View**: Allow users to click on a service to view its detailed information in a separate component or page.
+  [Optional]
+- **Add Job Form**: Include a form to submit a new service.
+  [Bonus Points]
+- **Update/Delete Options**: Provide options to update or delete jobs directly from the interface.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Documentation:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **README.md**: Include setup instructions, API documentation, and a brief explanation of choices made regarding architecture and libraries.
